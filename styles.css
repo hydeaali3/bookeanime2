@@ -1,0 +1,184 @@
+html {
+    box-sizing:border-box;
+    background-color: black;
+}
+
+*, *:before, *:after {
+    box-sizing:inherit;
+}
+
+img {
+    max-width: 100%;
+}
+
+.bookcontainer{
+    width: 500px;
+    height: 800px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+@keyframes fade{
+    0% { opacity: 1; }
+    50%{ opacity: 1;}
+    75% {opacity: 1;}
+    100% { opacity: 0;}
+}
+
+.cover{
+    width: 470px;
+    height: 470px;
+    position: absolute;
+    top: 1%;
+    left: 2.5%;
+    perspective: 50px;
+    z-index: -1;
+    animation: fade 20s ease-out;
+}
+@keyframes fade2{
+    0% { opacity: 0; }
+    50%{ opacity: 0;}
+    75% {opacity: 1;}
+    100% { opacity: 1;}
+}
+
+.cover2{
+    width: 470px;
+    height: 470px;
+    position: absolute;
+    top: 1%;
+    left: 2.5%;
+    perspective: 50px;
+    z-index: -1;
+    animation: fade2 3s;
+}
+
+
+@keyframes clouds {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.clouds{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 9%;
+    left: 25%;
+    perspective: 50px;
+    animation: clouds 15s linear infinite;
+}
+
+.background{
+    width: 325px;
+    height: 325px;
+    position: absolute;
+    top: 29%;
+    left: 17%;
+    perspective: 50px;
+}
+@keyframes title1 {
+    0% { opacity: 0; }
+    100% { opacity: 280px;}
+}
+.title1{
+    width: 230px;
+    height: 230px;
+    position: absolute;
+    top: 42%;
+    left: 27.5%;
+    perspective: 50px;
+    animation: title1 5s ease-in ;
+}
+
+@keyframes author {
+    0% { opacity: 0; }
+    100% { opacity: 1;}
+}
+.author{
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 60%;
+    left: 25%;
+    perspective: 50px;
+    opacity: 0;
+
+    /* Apply animation */
+    animation: author 5s ease-in;
+    animation-delay: 2s;
+    animation-fill-mode: forwards; /* Keeps opacity at 1 after animation */
+}
+
+@keyframes author {
+    0% { opacity: 0; }
+    100% { opacity: 1;}
+}
+
+.eye {
+    width: 125px;
+    height: 125px;
+    position: absolute;
+    top: 17%;
+    left: 38%;
+    perspective: 50px;
+}
+
+.gold{
+    width: 380px;
+    height: 380px;
+    position: absolute;
+    top: 8%;
+    left: 12%;
+    perspective: 50px;
+}
+/* Wiggle keyframes */
+@keyframes wiggle-left {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    50% { transform: rotate(10deg); }
+    75% { transform: rotate(-10deg); }
+}
+
+@keyframes wiggle-right {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(10deg); }
+    50% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+}
+
+/* Base styling for both elements */
+.sun, .moon {
+    display: block;
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Sun position and styling */
+.sun {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    top: 39.7%;
+    left: 27.8%;
+}
+
+/* Moon position and styling */
+.moon {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 39.5%;
+    left: 64.5%;
+}
+
+/* Wiggle on hover */
+.sun:hover {
+    animation: wiggle-left 0.6s ease-in-out;
+}
+
+.moon:hover {
+    animation: wiggle-right 0.6s ease-in-out;
+}
